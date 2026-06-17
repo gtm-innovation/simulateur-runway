@@ -807,6 +807,83 @@
 .v5 .mric-share-toast.mric-show { opacity: 1; }
 .v5 .mric-share-native { display: none; }
 
+/* ========== CTA PARTENAIRE DEBLOCK ========== */
+.v5 .mric-deblock { margin-top: 28px; }
+.v5 .mric-deblock-card {
+  position: relative;
+  border: 1px solid rgba(0,245,192,0.30);
+  border-radius: 18px;
+  padding: 26px 26px 22px;
+  background: linear-gradient(180deg, rgba(0,140,100,0.12) 0%, rgba(11,17,32,0.55) 100%);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35), 0 0 50px rgba(0,245,192,0.06);
+  overflow: hidden;
+}
+.v5 .mric-deblock-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; margin-bottom: 16px;
+}
+.v5 .mric-deblock-wordmark {
+  font-size: 22px; font-weight: 800; letter-spacing: -0.03em; line-height: 1;
+  color: var(--fg-2); flex-shrink: 0;
+}
+.v5 .mric-deblock-badge {
+  display: inline-block;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #0A0E18; background: var(--teal);
+  padding: 5px 12px; border-radius: 999px; white-space: nowrap;
+}
+.v5 .mric-deblock-title {
+  font-size: 21px; font-weight: 700; line-height: 1.25; color: var(--fg-2); margin: 0 0 12px;
+}
+.v5 .mric-deblock-rate {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 0 0 14px;
+}
+.v5 .mric-deblock-rate-num {
+  font-size: 34px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; color: var(--teal);
+}
+.v5 .mric-deblock-rate-lbl { font-size: 13px; color: var(--fg-3); }
+.v5 .mric-deblock-sub {
+  font-size: 14px; line-height: 1.55; color: var(--fg-3); margin: 0 0 18px; max-width: 540px;
+}
+.v5 .mric-deblock-sub strong { color: var(--fg-2); font-weight: 600; }
+.v5 .mric-deblock-feats {
+  list-style: none; margin: 0 0 22px; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px;
+}
+.v5 .mric-deblock-feats li {
+  font-size: 13.5px; color: var(--fg-3); line-height: 1.4;
+  padding-left: 24px; position: relative;
+}
+.v5 .mric-deblock-feats li strong { color: var(--fg-2); font-weight: 600; }
+.v5 .mric-deblock-feats li::before {
+  content: ""; position: absolute; left: 0; top: 2px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: rgba(0,245,192,0.15);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%2300F5C0' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: center;
+}
+.v5 .mric-deblock-btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 15px; font-weight: 700; color: #0A0E18;
+  background: var(--teal); padding: 14px 24px; border-radius: 12px;
+  text-decoration: none; transition: transform .18s, box-shadow .18s, opacity .18s;
+  box-shadow: 0 6px 22px rgba(0,245,192,0.22);
+}
+.v5 .mric-deblock-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(0,245,192,0.32); }
+.v5 .mric-deblock-btn:active { transform: translateY(0); }
+.v5 .mric-deblock-btn svg { width: 16px; height: 16px; transition: transform .18s; }
+.v5 .mric-deblock-btn:hover svg { transform: translateX(3px); }
+.v5 .mric-deblock-fine {
+  font-size: 11px; line-height: 1.5; color: var(--fg-3); opacity: 0.72;
+  margin: 14px 0 0; max-width: 560px;
+}
+@media (max-width: 640px) {
+  .v5 .mric-deblock-card { padding: 22px 18px 18px; }
+  .v5 .mric-deblock-title { font-size: 18px; }
+  .v5 .mric-deblock-feats { grid-template-columns: 1fr; gap: 9px; }
+  .v5 .mric-deblock-btn { width: 100%; justify-content: center; }
+}
+
 /* ========== LEAD MAGNET — CTA, garde un treatment subtil (gradient bg) ========== */
 .v5 .mric-lm {
   padding: 28px 30px;
@@ -1608,6 +1685,33 @@
 
             <!-- Summary -->
             <div class="qblock mric-anim" id="mric-summary"></div>
+
+            <!-- ===== CTA PARTENAIRE DEBLOCK ===== -->
+            <div class="mric-deblock mric-anim mric-anim-d4">
+              <div class="mric-deblock-card">
+                <div class="mric-deblock-head">
+                  <span class="mric-deblock-wordmark">deblock</span>
+                  <span class="mric-deblock-badge">jusqu'à 500&nbsp;€ offerts</span>
+                </div>
+                <div class="mric-deblock-title">Votre épargne de précaution dort à 0&nbsp;%&nbsp;?</div>
+                <div class="mric-deblock-rate">
+                  <span class="mric-deblock-rate-num">Jusqu'à 4&nbsp;%</span>
+                  <span class="mric-deblock-rate-lbl">d'intérêts par an · versés chaque jour</span>
+                </div>
+                <p class="mric-deblock-sub">Le <strong>compte courant rémunéré Deblock</strong> fait travailler votre cash&nbsp;: vos intérêts tombent chaque jour, tout en gardant votre argent disponible immédiatement pour votre runway.</p>
+                <ul class="mric-deblock-feats">
+                  <li>Intérêts versés <strong>chaque jour</strong></li>
+                  <li><strong>Sans plafond</strong> ni engagement</li>
+                  <li>Argent <strong>dispo à tout moment</strong></li>
+                  <li>IBAN français · agréé ACPR</li>
+                </ul>
+                <a class="mric-deblock-btn" href="https://moneyradar.org/go/deblock" target="_blank" rel="sponsored noopener">
+                  Ouvrir un compte — jusqu'à 500&nbsp;€ offerts
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <p class="mric-deblock-fine">Lien partenaire. Le taux de 4&nbsp;% n'est pas garanti dans le temps&nbsp;: rémunération variable, indexée sur les marchés. Produit adossé à la DeFi&nbsp;: le capital ne bénéficie pas de la garantie d'un livret réglementé. Bonus de bienvenue soumis à conditions (dépôt, vérification d'identité, achat minimum).</p>
+              </div>
+            </div>
 
             <!-- ===== LEAD MAGNET : plan runway ===== -->
             <div class="mric-cta-lm mric-anim" id="mric-cta-lm">
