@@ -1905,7 +1905,7 @@
           <li>Si revenus ≥ dépenses : runway <strong>infini</strong>, vous êtes indépendant.</li>
         </ul>
       </div>
-      <p class="btxt">À noter : le chômage en France (ARE) couvre <strong>jusqu'à 24 mois</strong> (36 mois pour les seniors). Au-delà, c'est l'épargne pure qui prend le relais. C'est pourquoi la barre symbolique des <strong>6 mois d'épargne pure</strong> est le standard recommandé partout.</p>
+      <p class="btxt">À noter : le chômage en France (ARE) couvre <strong>jusqu'à 18 mois</strong> avant 53 ans (22,5 mois de 53 à 54 ans, 27 mois à partir de 55 ans), à condition d'y avoir droit : une démission n'ouvre en général pas de droits. Au-delà, c'est l'épargne pure qui prend le relais. C'est pourquoi la barre symbolique des <strong>6 mois d'épargne pure</strong> est le standard recommandé partout.</p>
     </div>
   </section>
 
@@ -1978,7 +1978,7 @@
         </details>
         <details>
           <summary>Comment estimer mon allocation chômage (ARE) ?</summary>
-          <div class="fans">L'ARE en France représente environ <strong>57 % de votre salaire journalier de référence</strong>, plafonnée à environ 75 % du salaire net. La durée maximale est de 18 à 24 mois pour les moins de 53 ans (jusqu'à 36 mois pour les seniors). Utilisez le simulateur officiel France Travail pour une estimation précise.</div>
+          <div class="fans">L'ARE en France représente environ <strong>57 % de votre salaire journalier de référence</strong>, plafonnée à environ 75 % du salaire net. La durée maximale est de 18 mois pour les moins de 53 ans, 22,5 mois de 53 à 54 ans et 27 mois à partir de 55 ans. Le simulateur retient 18 mois. Utilisez le simulateur officiel France Travail pour une estimation précise.</div>
         </details>
         <details>
           <summary>Mes dépenses fixes incluent-elles les loisirs ?</summary>
@@ -2011,7 +2011,7 @@
   var chartCanvas=document.getElementById('mric-chart');
 
   var MAX_MONTHS=120; // plafond simulation 10 ans
-  var ARE_MAX_MONTHS=24; // 24 mois standard
+  var ARE_MAX_MONTHS=18; // durée maximale avant 53 ans depuis le 1er février 2023 (548 jours, service-public F14860)
 
   function formatEuro(n){
     return Math.round(n).toLocaleString('fr-FR',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:0});
